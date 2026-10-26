@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Odoo 19 already has client_order_ref at the end of the list, hidden.
+         Unhide it by default and move it after the order number.. -->
+    <record id="view_order_tree_customer_reference" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="client_order_ref" position="move" />
+            </field>
+            <field name="client_order_ref" position="attributes">
+                <attribute name="optional">show</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="view_quotation_tree_customer_reference" model="ir.ui.view">
+        <field name="name">sale.order.tree</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_quotation_tree" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="client_order_ref" position="move" />
+            </field>
+            <field name="client_order_ref" position="attributes">
+                <attribute name="optional">show</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
