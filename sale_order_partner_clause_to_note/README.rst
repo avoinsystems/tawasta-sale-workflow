@@ -28,6 +28,8 @@ Contributors
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
+* Jussi-Pekka Ruusunen <jussi-pekka.ruusunen@avoin.systems>
+
 Maintainer
 ----------
 
